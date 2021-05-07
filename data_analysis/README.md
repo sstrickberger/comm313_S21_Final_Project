@@ -1,6 +1,14 @@
-## Data analysis notebooks for COMM313 Final Project
+## Data analysis | "An Overlooked Partnership"
 
-* This folder should contain the a series of Jupyter notebooks you create to do the data analysis.
+Welcome to my data analysis folder.
 
-* Update this README file to document the notebooks and give a short description of what each one does.
+This folder contains a series of three Jupyter notebooks that contain my data analysis. One notebook scraps my data. One cleans my raw data. The last one analyzes the cleaned data. The folder also includes my two sets of clean corpora, one of pre-1840s writings and one of post-1840s writings. I thought it was important to include these files in my data analysis folder – right next to the notebook in which I cleaned and produced them. I will explore each of these documents in greater detail below.
+
+* “ScrapANDdownloadPDFs” Notebook | I scraped the University of Detroit Mercy “Black Abolitionist Archive” for about ~750 pdfs. In order to scrape these PDFs, I ran a series of for-loops. The site organizes their materials in alphabetical order. There is a page for all the authors whose name begins with “A”, then “B”, etc. Each PDF is two mouse clicks away from the initial page that houses it. I crafted a for-loop that went through each of these folders and ultimately downloaded and saved the PDFs into my data folder.
+
+* “Clean Corpus” Notebook | After scraping the data in the previous notebook, I cleaned and sorted the data in this one. The major aspect of my cleaning was removing unnecessary text from the documents. This often included taking away page numbers and document identifications which the archive placed on the PDFs. I then broke each document into individual pages, which were to become my unit of analysis. They are roughly the size of paragraphs, which is the unit of analysis of certain computerized text analysis projects in the historical literature. I exported the clean files to the "clean" folder in my "data" folder.
+
+* “Analysis work” Notebook | Now that I have scraped and cleaned the data, I can get to work on analyzing it. I administered three main tests to examine claims of the existing scholarship. Scholars argue that Black abolitionist rhetoric became more civic-oriented and nationalistic, increasingly focused on self-identification, and progressively more demanding after the year 1840. I tested each of these in turn. For the first two, I employed frequency tests and keyness analysis to understand which time period employed more terms relating to Black nationalism and Black identity. I also used a key word in context (KWIC) analysis to test for external validity. For testing whether the rhetoric became more demanding, I utilized VADER (Valence Aware Dictionary for Sentiment Reasoning) sentiment analysis. I found and compared the average sentiments score of each corpus. Once again, I employed KWIC analysis to test whether there was external validity in my results.
+
+* “Functions” File | This functions file includes many of the functions I utilized in my three analysis notebooks. This includes the ability to tokenize and engage in KWIC analysis. 
 
